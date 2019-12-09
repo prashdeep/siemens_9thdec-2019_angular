@@ -1,6 +1,6 @@
 import {User} from './User';
 
-class CorporateUser implements User{
+class CorporateUser implements User {
 
     firstname:string;
    lastname: string;
