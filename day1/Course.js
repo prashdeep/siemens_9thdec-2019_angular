@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Course = /** @class */ (function () {
     function Course(_id, _name, _price, _desc) {
         this._id = _id;
@@ -40,12 +42,7 @@ var Course = /** @class */ (function () {
     };
     return Course;
 }());
-var printCourseDetails = function (course) {
+exports.Course = Course;
+exports.printCourseDetails = function (course) {
     return "Course Name: " + course.name + " Price: " + course.price;
 };
-var course = new Course(1, "Angular 8", 15000);
-var course2 = new Course(2, "Angular 7", 10000);
-var course3 = new Course(3, "Angular 9", 20000, "Limited offer");
-course.name = "Angular 9";
-console.log(course2.name);
-printCourseDetails(course2);

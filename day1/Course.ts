@@ -1,4 +1,4 @@
-class Course {
+export class Course {
 
     constructor(private _id:number, 
                 private _name:string, 
@@ -34,18 +34,11 @@ class Course {
     }
 }
 
-const printCourseDetails = function (course:Course):string {
+export const printCourseDetails = function (course:Course):string {
     return `Course Name: ${course.name} Price: ${course.price}`
 }
 
-let course = new Course(1, "Angular 8", 15000);
-let course2 = new Course(2, "Angular 7", 10000);
-let course3 = new Course(3, "Angular 9", 20000 , "Limited offer");
 
-course.name = "Angular 9";
-console.log (course2.name);
-
-printCourseDetails(course2);
 
 
 
