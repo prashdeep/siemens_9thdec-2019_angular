@@ -21,16 +21,31 @@ class Course {
         this._name = name;
     }
 
+    public get price():number{
+        return this._price;
+    }
+
+    public set price(price:number) {
+        this._price = price;
+    }
+
     public printDesc():string {
         return `Course name: ${this._name}  price: ${this._price}`;
     }
 }
 
+const printCourseDetails = function (course:Course):string {
+    return `Course Name: ${course.name} Price: ${course.price}`
+}
+
 let course = new Course(1, "Angular 8", 15000);
 let course2 = new Course(2, "Angular 7", 10000);
+let course3 = new Course(3, "Angular 9", 20000 , "Limited offer");
 
 course.name = "Angular 9";
 console.log (course2.name);
+
+printCourseDetails(course2);
 
 
 
