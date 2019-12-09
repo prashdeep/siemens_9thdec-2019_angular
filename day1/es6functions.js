@@ -44,7 +44,7 @@ let courses = [
 ]
 
 courses
-.filter(course => course.price < 20000)
+.filter(course => course.price > 10000000)
 .map(course => ({"name": course.name, "price":course.price}))
 .forEach(course => console.log(course))
 
