@@ -1,6 +1,7 @@
-var User = (function(){
+var Config = (function(){
     var firstname = "";
     var lastname = "";
+    let REST_API = "https://backend.api.com/v1/users";
 
     console.log('should be called only once ');
 
@@ -16,6 +17,9 @@ var User = (function(){
         getLastName:function(){
             return lastname;
         },
+        getURI:function(){
+            return REST_API;
+        },
 
         setLastName:function(lname){
             lastname = lname;
@@ -25,8 +29,9 @@ var User = (function(){
     return innerObj;
 }());
 
-User.setFirstName("kamesh");
-console.log(User.getFirstName());
-console.log(User.getFirstName());
-console.log(User.getFirstName());
-console.log(User.getFirstName());
+Config.setFirstName("kamesh");
+console.log(Config.getFirstName());
+console.log(Config.getFirstName());
+console.log(Config.getFirstName());
+console.log(Config.getFirstName());
+console.log(Config.getURI());
