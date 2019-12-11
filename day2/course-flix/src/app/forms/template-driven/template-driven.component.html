@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-        <form>
+        <form #courseForm="ngForm" (ngSubmit)="submitCourse(courseForm.value)">
             <div class="form-group">
                 <label for="coursename">Course Name</label>
                 <input 
@@ -13,7 +13,6 @@
                     required
                     minlength="6"
                     maxlength="8"
-                    (change)="log(coursename)"
                     #coursename="ngModel">
             </div>
             
@@ -36,7 +35,10 @@
                 <input type="checkbox" class="form-check-input" id="offer">
                 <label class="form-check-label" for="offer">Offer enabled</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button 
+                type="submit" 
+                [disabled]="courseForm.invalid"
+                class="btn btn-primary">Submit</button>
           </form>
         </div>
         

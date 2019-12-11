@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CourseService } from 'src/app/services/course.service';
 
 @Component({
   selector: 'app-template-driven',
@@ -7,15 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private courseService:CourseService) { }
 
   ngOnInit() {
   }
 
-  log(coursename){
-    console.log('The value of coursename insdie the component')
-    console.log(coursename.errors);
-
+  submitCourse({coursename, price}){
+    const course = {};
+    course.name = coursename;
+    course.price = price;
+    this.courseService.addCourse(course);
   }
 
 }

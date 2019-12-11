@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class CourseService {
   
+  
   courses; 
 
   constructor() { 
@@ -56,6 +57,10 @@ export class CourseService {
 
   loadAllCourses():any[]{
     return this.courses;
+  }
+
+  addCourse(course:any) {
+    this.courses.push(course);
   }
 
 }
