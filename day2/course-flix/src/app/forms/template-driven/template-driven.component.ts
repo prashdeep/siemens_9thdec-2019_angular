@@ -15,9 +15,10 @@ export class TemplateDrivenComponent implements OnInit {
 
   submitCourse({coursename, price}){
     const course = {};
-    course.name = coursename;
+ /*   course.name = coursename;
     course.price = price;
     this.courseService.addCourse(course);
+    */
   }
 
 }
