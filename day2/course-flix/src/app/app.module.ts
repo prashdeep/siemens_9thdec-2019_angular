@@ -10,6 +10,10 @@ import { TwoWayComponent } from './two-way/two-way.component';
 import { NameFormatPipe } from './pipes/name-format.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { FilterUsersPipe } from './pipes/filter-users.pipe';
+import { CoursesComponent } from './courses/courses.component';
+import { CourseComponent } from './course/course.component';
+import { OuterComponent } from './outer/outer.component';
+import { InnerComponent } from './inner/inner.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { FilterUsersPipe } from './pipes/filter-users.pipe';
     TwoWayComponent,
     NameFormatPipe,
     SortPipe,
-    FilterUsersPipe
+    FilterUsersPipe,
+    CoursesComponent,
+    CourseComponent,
+    OuterComponent,
+    InnerComponent
   ],
   imports: [
     BrowserModule,
