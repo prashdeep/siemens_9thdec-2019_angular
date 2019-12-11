@@ -14,6 +14,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseComponent } from './course/course.component';
 import { OuterComponent } from './outer/outer.component';
 import { InnerComponent } from './inner/inner.component';
+import { ViewchildComponent } from './viewchild/viewchild.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { InnerComponent } from './inner/inner.component';
     CoursesComponent,
     CourseComponent,
     OuterComponent,
-    InnerComponent
+    InnerComponent,
+    ViewchildComponent
   ],
   imports: [
     BrowserModule,
