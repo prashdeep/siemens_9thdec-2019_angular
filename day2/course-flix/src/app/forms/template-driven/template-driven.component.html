@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="coursename">Course Name</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="coursename" 
+                    name="coursename" 
+                    ngModel
+                    required
+                    minlength="6"
+                    maxlength="8"
+                    #coursename="ngModel">
+            </div>
+            <div *ngIf="coursename.touched && coursename.invalid" class="alert alert-danger">
+                <span>Course name entered is invalid !!</span>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    ngModel
+                    id="price"
+                    name="price"
+                    required
+                    #price="ngModel">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="offer">
+                <label class="form-check-label" for="offer">Offer enabled</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        
+    </div>
+</div>

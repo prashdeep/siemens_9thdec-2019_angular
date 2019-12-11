@@ -15,8 +15,19 @@ export class ViewchildComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     console.log(`inside the afterviewinit life cycle, the value is`);
-    setTimeout(() => {
+   /* setInterval(() => {
       this.test.nativeElement.textContent = 'After loading the view content..'
-    }, 5000);
+    }, 1000);
+    */
+  }
+
+  ngAfterContentChecked(): void {
+    console.log("This will be invoked every time the contet is changed...")
+  }
+
+  ngDoCheck(): void {
+    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
+    //Add 'implements DoCheck' to the class.
+    console.log(`Do check called.`)
   }
 }

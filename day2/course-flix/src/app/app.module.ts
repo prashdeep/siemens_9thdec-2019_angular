@@ -15,6 +15,7 @@ import { CourseComponent } from './course/course.component';
 import { OuterComponent } from './outer/outer.component';
 import { InnerComponent } from './inner/inner.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
+import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ViewchildComponent } from './viewchild/viewchild.component';
     CourseComponent,
     OuterComponent,
     InnerComponent,
-    ViewchildComponent
+    ViewchildComponent,
+    TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,
