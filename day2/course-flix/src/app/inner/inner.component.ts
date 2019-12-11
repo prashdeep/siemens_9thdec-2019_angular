@@ -13,10 +13,12 @@ export class InnerComponent implements OnInit {
   }
 
   @Input() name;
+  @Input() offer;
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(`changes tracked inside the child component `)
-    console.log(changes);
+    console.log("Only for name changes "+changes['name']);
+
   }
 
 }

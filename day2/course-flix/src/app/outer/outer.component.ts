@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class OuterComponent implements OnInit {
 
   coursename;
+  offer:string = "test";
   constructor() { }
 
   ngOnInit() {
