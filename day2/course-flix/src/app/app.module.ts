@@ -17,6 +17,7 @@ import { InnerComponent } from './inner/inner.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { ModelDrivenComponent } from './forms/model-driven/model-driven.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ModelDrivenComponent } from './forms/model-driven/model-driven.componen
     InnerComponent,
     ViewchildComponent,
     TemplateDrivenComponent,
-    ModelDrivenComponent
+    ModelDrivenComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
