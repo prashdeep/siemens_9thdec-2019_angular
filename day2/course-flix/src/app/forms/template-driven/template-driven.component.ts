@@ -12,6 +12,10 @@ export class TemplateDrivenComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+  log(coursename){
+    console.log('The value of coursename insdie the component')
+    console.log(coursename.errors);
+
+  }
 
 }
