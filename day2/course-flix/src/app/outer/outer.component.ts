@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OuterComponent implements OnInit {
 
+  coursename;
   constructor() { }
 
   ngOnInit() {
