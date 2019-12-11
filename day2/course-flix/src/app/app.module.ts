@@ -16,6 +16,7 @@ import { OuterComponent } from './outer/outer.component';
 import { InnerComponent } from './inner/inner.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
+import { ModelDrivenComponent } from './forms/model-driven/model-driven.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TemplateDrivenComponent } from './forms/template-driven/template-driven
     OuterComponent,
     InnerComponent,
     ViewchildComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    ModelDrivenComponent
   ],
   imports: [
     BrowserModule,
