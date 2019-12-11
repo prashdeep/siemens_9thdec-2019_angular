@@ -9,6 +9,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {
     path:'',
+    redirectTo:'courses',
+    pathMatch:'full'
+  },
+  {
+    path:'courses',
     component:CoursesComponent
   },
   {
