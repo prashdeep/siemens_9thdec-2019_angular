@@ -31,7 +31,8 @@ export class ModelDrivenComponent {
   }
 
   handleSubmit(){
-
+    console.log('came inside the submit method inside model driven form')
+    console.log(this.courseForm.value);
   }
 
 }
