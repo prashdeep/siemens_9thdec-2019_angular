@@ -21,6 +21,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsComponent } from './forms/forms.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { AuthService } from './auth.service';
+import { DeactivateComponent } from './deactivate/deactivate.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,7 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService, DeactivateComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

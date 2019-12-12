@@ -6,6 +6,8 @@ import { ModelDrivenComponent } from './forms/model-driven/model-driven.componen
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsComponent } from './forms/forms.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { AuthService } from './auth.service';
+import { DeactivateComponent } from './deactivate/deactivate.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,7 @@ const routes: Routes = [
   {
     path:'courses/:id',
     component:CourseDetailsComponent,
+    canActivate:[AuthService]
 
   },
   {
@@ -38,7 +41,8 @@ const routes: Routes = [
       },
       {
         path:'template',
-        component:TemplateDrivenComponent
+        component:TemplateDrivenComponent,
+        canDeactivate:[DeactivateComponent]
       },
     ]
   },
