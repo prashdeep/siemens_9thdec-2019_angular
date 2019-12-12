@@ -3,6 +3,8 @@
   <div class="card-body">
     <h5 class="card-title">{{data.name | uppercase}}</h5>
     <p class="card-text">{{data.price | currency:'INR':true}}</p>
+    <app-rating [value]="data.rating"></app-rating>
+    <br/>
     <a [routerLink]="['/courses', data.id]"  class="btn btn-primary">Details</a>
   </div>
 </div>

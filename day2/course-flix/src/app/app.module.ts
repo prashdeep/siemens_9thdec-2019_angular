@@ -25,6 +25,7 @@ import { AuthService } from './auth.service';
 import { DeactivateComponent } from './deactivate/deactivate.component';
 import { PhoneFormatDirective } from './phone-format.directive';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { CustomDirectiveComponent } from './custom-directive/custom-directive.co
     FormsComponent,
     CourseDetailsComponent,
     PhoneFormatDirective,
-    CustomDirectiveComponent
+    CustomDirectiveComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
