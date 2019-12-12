@@ -20,7 +20,8 @@ const routes: Routes = [
   },
   {
     path:'courses/:id',
-    component:CourseDetailsComponent
+    component:CourseDetailsComponent,
+
   },
   {
     path:'forms',

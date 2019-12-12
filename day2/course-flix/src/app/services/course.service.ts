@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Course } from '../model/Course';
 
 @Injectable({
   providedIn: 'root'
@@ -72,7 +73,7 @@ export class CourseService {
     return this.courses;
   }
 
-  addCourse(course:any) {
+  addCourse(course:Course) {
     this.courses.push(course);
   }
 
