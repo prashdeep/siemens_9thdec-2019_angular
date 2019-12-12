@@ -10,13 +10,8 @@ export class CourseService {
 
   API_URL = "http://my-json-server.typicode.com/prashdeep/courseflix/courses";
 
-  getCourseDetails(courseId: number): string {
-    return `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Sed quas repellat totam voluptate. Assumenda, unde.
-            Sed quas repellat totam voluptate. Assumenda, unde.
-            Sed quas repellat totam voluptate. Assumenda, unde.
-            Sed quas repellat totam voluptate. Assumenda, unde.
-            Sed quas repellat totam voluptate. Assumenda, unde.`
+  getCourseDetails(courseId: number): Observable<any> {
+    return this.httpClient.get<any>(this.API_URL+"/"+courseId);
   }
   
   

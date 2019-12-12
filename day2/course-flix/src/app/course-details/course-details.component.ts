@@ -9,14 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CourseDetailsComponent implements OnInit {
 
-  courseDetails: string;
+  courseDetails: any;
 
   constructor(private courseService:CourseService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     const courseId = this.activatedRoute.snapshot.paramMap.get('id');
  
-    this.courseDetails = this.courseService.getCourseDetails(+courseId);
+   this.courseService
+    .getCourseDetails(+courseId)
+    .subscribe(courseDetails => this.courseDetails = courseDetails);
   }
 
 }
