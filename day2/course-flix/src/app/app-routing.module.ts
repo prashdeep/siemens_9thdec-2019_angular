@@ -9,6 +9,7 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { AuthService } from './auth.service';
 import { DeactivateComponent } from './deactivate/deactivate.component';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { CompOneComponent } from './admin/comp-one/comp-one.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,10 @@ const routes: Routes = [
   {
     path:'custom-directive',
     component:CustomDirectiveComponent
+  },
+  {
+    path:'admin',
+    component:CompOneComponent
   },
   {
     path:'**',
