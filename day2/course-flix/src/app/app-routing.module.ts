@@ -10,6 +10,7 @@ import { AuthService } from './auth.service';
 import { DeactivateComponent } from './deactivate/deactivate.component';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 import { CompOneComponent } from './admin/comp-one/comp-one.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   },
   {
     path:'courses',
-    component:CoursesComponent
+    component:CoursesComponent,
+    canActivate:[AuthService]
   },
   {
     path:'courses/:id',
@@ -55,6 +57,10 @@ const routes: Routes = [
   {
     path:'admin',
     loadChildren:'./admin/admin.module#AdminModule'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path:'**',

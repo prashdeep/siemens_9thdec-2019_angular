@@ -1,12 +1,28 @@
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthenticationService } from './authentication.service';
 
-export class AuthService  implements CanActivate{
-  
-  canActivate(route:ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    const auth_token = localStorage.getItem('auth_token');
- 
-    return true;
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService implements CanActivate {
+
+  constructor(
+    private router:Router,
+    private authenticationService:AuthenticationService
+  ){
+
   }
-
-  constructor() { }
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): boolean {
+    console.log('Came inside the can active method of auth guard....')
+    const currentUser = this.authenticationService.currentUserValue;
+    if (currentUser){
+      return true;
+    }
+    //navigate to login screen
+    this.router.navigate(['/login']);
+  }
 }

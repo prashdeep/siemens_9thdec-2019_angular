@@ -21,12 +21,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsComponent } from './forms/forms.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
-import { AuthService } from './auth.service';
 import { DeactivateComponent } from './deactivate/deactivate.component';
 import { PhoneFormatDirective } from './phone-format.directive';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 import { RatingComponent } from './rating/rating.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { JwtInterceptor } from './JwtInterceptor';
+import { ErrorInterceptor } from './ErrorInterceptor';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
     CourseDetailsComponent,
     PhoneFormatDirective,
     CustomDirectiveComponent,
-    RatingComponent
+    RatingComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,12 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthService, DeactivateComponent],
+  providers: [
+    DeactivateComponent,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi:true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
