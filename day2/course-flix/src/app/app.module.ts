@@ -26,6 +26,7 @@ import { DeactivateComponent } from './deactivate/deactivate.component';
 import { PhoneFormatDirective } from './phone-format.directive';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 import { RatingComponent } from './rating/rating.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { RatingComponent } from './rating/rating.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [AuthService, DeactivateComponent],
   bootstrap: [AppComponent]
