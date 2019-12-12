@@ -3,6 +3,6 @@
   <div class="card-body">
     <h5 class="card-title">{{data.name | uppercase}}</h5>
     <p class="card-text">{{data.price | currency:'INR':true}}</p>
-    <a [routerLink]="['/courses', data.id]" routerLinkActive="router-link-active"  class="btn btn-primary">Details</a>
+    <a [routerLink]="['/courses', data.id]"  class="btn btn-primary">Details</a>
   </div>
 </div>

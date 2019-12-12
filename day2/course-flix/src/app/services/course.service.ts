@@ -5,8 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class CourseService {
 
-  getCourseDetails(arg0: number): any {
-    //TODO
+  getCourseDetails(courseId: number): string {
+    return `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Sed quas repellat totam voluptate. Assumenda, unde.
+            Sed quas repellat totam voluptate. Assumenda, unde.
+            Sed quas repellat totam voluptate. Assumenda, unde.
+            Sed quas repellat totam voluptate. Assumenda, unde.
+            Sed quas repellat totam voluptate. Assumenda, unde.`
   }
   
   
