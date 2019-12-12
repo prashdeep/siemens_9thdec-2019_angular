@@ -1,7 +1,14 @@
 <div class="container" style="margin-top:40px">
     <div class="form-group">
       <label for="">Enter your phone number</label>
-      <input type="text" class="form-control" name="phone" id="phone" aria-describedby="helpId" placeholder="phone">
+      <input 
+        type="text" 
+        class="form-control" 
+        name="phone" 
+        id="phone" 
+        aria-describedby="helpId" 
+        [phoneFormat]="IN"
+        placeholder="phone">
       <small id="helpId" class="form-text text-muted">Enter your phone number</small>
     </div>
 </div>
