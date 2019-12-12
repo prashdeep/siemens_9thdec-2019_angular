@@ -54,7 +54,7 @@ const routes: Routes = [
   },
   {
     path:'admin',
-    component:CompOneComponent
+    loadChildren:'./admin/admin.module#AdminModule'
   },
   {
     path:'**',

@@ -25,7 +25,6 @@ import { AuthService } from './auth.service';
 import { DeactivateComponent } from './deactivate/deactivate.component';
 import { PhoneFormatDirective } from './phone-format.directive';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
-import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -56,7 +55,6 @@ import { AdminModule } from './admin/admin.module';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AdminModule
   ],
   providers: [AuthService, DeactivateComponent],
   bootstrap: [AppComponent]
