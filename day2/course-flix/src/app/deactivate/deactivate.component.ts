@@ -7,6 +7,7 @@ export class DeactivateComponent implements CanDeactivate<TemplateDrivenComponen
                 currentRoute: ActivatedRouteSnapshot, 
                 currentState: RouterStateSnapshot, 
                 nextState?: RouterStateSnapshot):   boolean {
+                  
                 return confirm("Are you sure, you want to exit from this form ? ");
   }
 

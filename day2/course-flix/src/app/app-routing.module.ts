@@ -8,6 +8,7 @@ import { FormsComponent } from './forms/forms.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { AuthService } from './auth.service';
 import { DeactivateComponent } from './deactivate/deactivate.component';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 
 
 const routes: Routes = [
@@ -45,6 +46,10 @@ const routes: Routes = [
         canDeactivate:[DeactivateComponent]
       },
     ]
+  },
+  {
+    path:'custom-directive',
+    component:CustomDirectiveComponent
   },
   {
     path:'**',

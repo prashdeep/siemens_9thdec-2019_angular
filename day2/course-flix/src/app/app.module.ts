@@ -23,6 +23,8 @@ import { FormsComponent } from './forms/forms.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { AuthService } from './auth.service';
 import { DeactivateComponent } from './deactivate/deactivate.component';
+import { PhoneFormatDirective } from './phone-format.directive';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { DeactivateComponent } from './deactivate/deactivate.component';
     NotFoundComponent,
     NavbarComponent,
     FormsComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    PhoneFormatDirective,
+    CustomDirectiveComponent
   ],
   imports: [
     BrowserModule,
