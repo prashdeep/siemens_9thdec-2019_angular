@@ -22,7 +22,7 @@ export class TemplateDrivenComponent implements OnInit {
     const course:any={};
     course.name = coursename;
     course.price = price;
-    this.courseService.addCourse(course);
+    this.courseService.addCourse(course).subscribe(data => console.log(data));
     console.log('came inside the submit course of template driven forms ...')
     this.router.navigate(['']);
   }
