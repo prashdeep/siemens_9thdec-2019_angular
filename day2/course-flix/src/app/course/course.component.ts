@@ -21,7 +21,7 @@ export class CourseComponent implements OnInit, OnChanges {
     console.log("Inside the init method of child component");
   }
 
-  @Input() data;
+  @Input('data') data;
   
 
 }

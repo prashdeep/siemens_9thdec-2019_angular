@@ -20,6 +20,7 @@ import { ModelDrivenComponent } from './forms/model-driven/model-driven.componen
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsComponent } from './forms/forms.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FormsComponent } from './forms/forms.component';
     ModelDrivenComponent,
     NotFoundComponent,
     NavbarComponent,
-    FormsComponent
+    FormsComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,

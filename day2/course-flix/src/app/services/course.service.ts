@@ -4,6 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CourseService {
+
+  getCourseDetails(arg0: number): any {
+    //TODO
+  }
   
   
   courses; 
@@ -15,6 +19,7 @@ export class CourseService {
   
           "id":1,
           "name":"Angular",
+          "image":'../../assets/angular.jpg',
           "price":8000,
           "offer":true,
           "start_date":"2019-10-12",
@@ -25,6 +30,7 @@ export class CourseService {
       {
           "id":2,
           "name":"React",
+          "image":'../../assets/angular.jpg',
           "price":10000,
           "rating":3.88354357,
           "start_date":"2019-10-12",
@@ -36,6 +42,7 @@ export class CourseService {
           "id":3,
           "name":"Java Spring Boot",
           "price":15000,
+          "image":'../../assets/angular.jpg',
           "offer":true,
           "rating":4.34563,
           "start_date":"2019-10-12",
@@ -45,6 +52,7 @@ export class CourseService {
       {
           "id":4,
           "name":"Java MicroServices",
+          "image":'../../assets/angular.jpg',
           "price":20000,
           "rating":5.0,
           "start_date":"2019-10-12",

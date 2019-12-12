@@ -5,6 +5,7 @@ import { TemplateDrivenComponent } from './forms/template-driven/template-driven
 import { ModelDrivenComponent } from './forms/model-driven/model-driven.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsComponent } from './forms/forms.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'courses',
     component:CoursesComponent
+  },
+  {
+    path:'courses/:id',
+    component:CourseDetailsComponent
   },
   {
     path:'forms',
