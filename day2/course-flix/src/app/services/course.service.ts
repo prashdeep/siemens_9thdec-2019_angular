@@ -10,8 +10,8 @@ export class CourseService {
 
   API_URL = "http://my-json-server.typicode.com/prashdeep/courseflix/courses";
 
-  getCourseDetails(courseId: number): Observable<any> {
-    return this.httpClient.get<any>(this.API_URL+"/"+courseId);
+  getCourseDetails(courseId: number): Observable<Course> {
+    return this.httpClient.get<Course>(this.API_URL+"/"+courseId);
   }
   
   
@@ -21,12 +21,12 @@ export class CourseService {
   
   
 
-  loadAllCourses():Observable<any[]>{
-    return this.httpClient.get<any[]>(this.API_URL);
+  loadAllCourses():Observable<Course[]>{
+    return this.httpClient.get<Course[]>(this.API_URL);
   }
 
-  addCourse(course:Course):Observable<any> {
-    return this.httpClient.post<any>(this.API_URL, JSON.stringify(course))
+  addCourse(course:Course):Observable<Course> {
+    return this.httpClient.post<Course>(this.API_URL, JSON.stringify(course))
 
   }
 
