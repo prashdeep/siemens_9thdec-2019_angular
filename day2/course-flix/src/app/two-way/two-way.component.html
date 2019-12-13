@@ -3,11 +3,5 @@
 
 </div>
 <div class="container">
-    <span>{{filterUsersfilterUsersfilterUsersfilterUsers | nameFormat:'upper' }}</span>
 </div>
 
-<div class="container">
-    <ul *ngFor="let user of users | filterUsers:username | sort:'desc'">
-        <li>{{user}}</li>
-    </ul>
-</div>

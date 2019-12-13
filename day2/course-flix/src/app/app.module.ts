@@ -28,6 +28,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor } from './JwtInterceptor';
 import { ErrorInterceptor } from './ErrorInterceptor';
+import { PhoneFormatDirective } from './phone-format.directive';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ErrorInterceptor } from './ErrorInterceptor';
     CustomDirectiveComponent,
     RatingComponent,
     LoginComponent,
-    NameFormatPipe
+    NameFormatPipe,
+    PhoneFormatDirective
   ],
   imports: [
     BrowserModule,

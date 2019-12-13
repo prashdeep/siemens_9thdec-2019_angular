@@ -9,8 +9,7 @@ import {environment} from '../../environments/environment';
 })
 export class CourseService {
 
-  API_URL = "http://my-json-server.typicode.com/prashdeep/courseflix/courses"
-
+  API_URL  = environment.API_URL;
   
   getCourseDetails(courseId: number): Observable<Course> {
     return this.httpClient.get<Course>(this.API_URL+"/"+courseId);
