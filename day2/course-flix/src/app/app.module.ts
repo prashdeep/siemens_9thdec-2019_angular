@@ -29,7 +29,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor } from './JwtInterceptor';
 import { ErrorInterceptor } from './ErrorInterceptor';
-import { HttpClientErrorInterceptor } from './HttpClientErrorInterceptor';
 
 @NgModule({
   declarations: [
@@ -66,9 +65,8 @@ import { HttpClientErrorInterceptor } from './HttpClientErrorInterceptor';
   ],
   providers: [
     DeactivateComponent,
-    { provide: HTTP_INTERCEPTORS, useClass: HttpClientErrorInterceptor, multi:true}
-    //{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi:true },
-    //{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi:true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   
   ],
   bootstrap: [AppComponent]

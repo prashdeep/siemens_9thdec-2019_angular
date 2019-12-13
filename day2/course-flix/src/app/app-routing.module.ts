@@ -45,8 +45,8 @@ const routes: Routes = [
       },
       {
         path:'template',
-        component:TemplateDrivenComponent,
-        canDeactivate:[DeactivateComponent]
+        component:TemplateDrivenComponent
+        //canDeactivate:[DeactivateComponent]
       },
     ]
   },
