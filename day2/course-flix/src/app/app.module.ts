@@ -29,6 +29,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor } from './JwtInterceptor';
 import { ErrorInterceptor } from './ErrorInterceptor';
+import { HttpClientErrorInterceptor } from './HttpClientErrorInterceptor';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,6 @@ import { ErrorInterceptor } from './ErrorInterceptor';
     ChildComponent,
     TemplateComponent,
     TwoWayComponent,
-    NameFormatPipe,
     SortPipe,
     FilterUsersPipe,
     CoursesComponent,
@@ -54,7 +54,8 @@ import { ErrorInterceptor } from './ErrorInterceptor';
     PhoneFormatDirective,
     CustomDirectiveComponent,
     RatingComponent,
-    LoginComponent
+    LoginComponent,
+    NameFormatPipe
   ],
   imports: [
     BrowserModule,
@@ -65,8 +66,9 @@ import { ErrorInterceptor } from './ErrorInterceptor';
   ],
   providers: [
     DeactivateComponent,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi:true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: HttpClientErrorInterceptor, multi:true}
+    //{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi:true },
+    //{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   
   ],
   bootstrap: [AppComponent]
