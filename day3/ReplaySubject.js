@@ -2,7 +2,7 @@ const { ReplaySubject } = require( 'rxjs');
 
 const subject = new ReplaySubject(3); // buffer 3 values for new subscribers
 
-subject.subscribe({
+const handle2 = subject.subscribe({
   next: (v) => console.log(`observerA: ${v}`)
 });
 
@@ -11,7 +11,7 @@ subject.next(2);
 subject.next(3);
 subject.next(4);
 
-subject.subscribe({
+const handle = subject.subscribe({
   next: (v) => console.log(`observerB: ${v}`)
 });
 
@@ -27,3 +27,11 @@ subject.next(5);
 // observerB: 4
 // observerA: 5
 // observerB: 5
+
+handle.unsubscribe();
+handle2.unsubscribe();
+
+subject.next(6);
+subject.next(7);
+subject.next(8);
+subject.next(9);
